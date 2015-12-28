@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CivilFac.db3Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CivilFac" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TBLMonedas" EntityType="CivilFac.db3Model.TBLMonedas" />
+    <EntitySet Name="TblArticulos" EntityType="CivilFac.db3Model.TblArticulos" />
+    <EntitySet Name="TblArticulosFac" EntityType="CivilFac.db3Model.TblArticulosFac" />
+    <EntitySet Name="TblClientes" EntityType="CivilFac.db3Model.TblClientes" />
+    <EntitySet Name="TblCompanias" EntityType="CivilFac.db3Model.TblCompanias" />
+    <EntitySet Name="TblEstados" EntityType="CivilFac.db3Model.TblEstados" />
+    <EntitySet Name="TblFactura" EntityType="CivilFac.db3Model.TblFactura" />
+    <EntitySet Name="TblFormadePago" EntityType="CivilFac.db3Model.TblFormadePago" />
+    <EntitySet Name="TblImpuestos" EntityType="CivilFac.db3Model.TblImpuestos" />
+    <EntitySet Name="TblImpuestosFac" EntityType="CivilFac.db3Model.TblImpuestosFac" />
+    <EntitySet Name="TblMetodoPago" EntityType="CivilFac.db3Model.TblMetodoPago" />
+    <EntitySet Name="TblUnidadesMedida" EntityType="CivilFac.db3Model.TblUnidadesMedida" />
+    <EntitySet Name="TblUsuarios" EntityType="CivilFac.db3Model.TblUsuarios" />
+    <AssociationSet Name="FK_TblArticulos_0_0" Association="CivilFac.db3Model.FK_TblArticulos_0_0">
+      <End Role="TblCompanias" EntitySet="TblCompanias" />
+      <End Role="TblArticulos" EntitySet="TblArticulos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblArticulosFac_2_0" Association="CivilFac.db3Model.FK_TblArticulosFac_2_0">
+      <End Role="TblCompanias" EntitySet="TblCompanias" />
+      <End Role="TblArticulosFac" EntitySet="TblArticulosFac" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblClientes_0_0" Association="CivilFac.db3Model.FK_TblClientes_0_0">
+      <End Role="TblCompanias" EntitySet="TblCompanias" />
+      <End Role="TblClientes" EntitySet="TblClientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblFactura_5_0" Association="CivilFac.db3Model.FK_TblFactura_5_0">
+      <End Role="TblCompanias" EntitySet="TblCompanias" />
+      <End Role="TblFactura" EntitySet="TblFactura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblImpuestosFac_2_0" Association="CivilFac.db3Model.FK_TblImpuestosFac_2_0">
+      <End Role="TblCompanias" EntitySet="TblCompanias" />
+      <End Role="TblImpuestosFac" EntitySet="TblImpuestosFac" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblUsuarios_0_0" Association="CivilFac.db3Model.FK_TblUsuarios_0_0">
+      <End Role="TblCompanias" EntitySet="TblCompanias" />
+      <End Role="TblUsuarios" EntitySet="TblUsuarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblImpuestosFac_0_0" Association="CivilFac.db3Model.FK_TblImpuestosFac_0_0">
+      <End Role="TblImpuestos" EntitySet="TblImpuestos" />
+      <End Role="TblImpuestosFac" EntitySet="TblImpuestosFac" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="TBLMonedas">
+    <Key>
+      <PropertyRef Name="PKMonedaId" />
+    </Key>
+    <Property Name="PKMonedaId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKCompaniaId" Type="Int64" Nullable="false" />
+    <Property Name="Moneda" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Name="TipoCambio" Type="Double" Nullable="false" />
+    <Property Name="Prefijo" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+    <Property Name="Simbolo" Type="String" MaxLength="3" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TblArticulos">
+    <Key>
+      <PropertyRef Name="PKArticuloid" />
+    </Key>
+    <Property Name="PKArticuloid" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKCompaniaId" Type="Int64" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+    <Property Name="ClaveInterna" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="PrecioUnitario" Type="Double" Nullable="false" />
+    <Property Name="ManejaIVA" Type="Boolean" Nullable="false" />
+    <Property Name="FKUnidaddeMedidaid" Type="Int64" Nullable="false" />
+    <Property Name="FKFamiliaId" Type="Int64" Nullable="false" />
+    <Property Name="ActivoSN" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="TblCompanias" Relationship="CivilFac.db3Model.FK_TblArticulos_0_0" FromRole="TblArticulos" ToRole="TblCompanias" />
+  </EntityType>
+  <EntityType Name="TblArticulosFac">
+    <Key>
+      <PropertyRef Name="PKArticulosFacId" />
+      <PropertyRef Name="FKFacturaId" />
+    </Key>
+    <Property Name="PKArticulosFacId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FkFacturasId" Type="Int64" Nullable="false" />
+    <Property Name="FKCompaniaId" Type="Int64" Nullable="false" />
+    <Property Name="FKArticuloId" Type="Int64" Nullable="false" />
+    <Property Name="ArticuloDescripcion" Type="String" Nullable="false" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="Cantidad" Type="Double" Nullable="false" />
+    <Property Name="PrecioVenta" Type="Double" Nullable="false" />
+    <Property Name="UnidadMedida" Type="Int64" Nullable="false" />
+    <Property Name="DescUnidadMedida" Type="String" Nullable="false" MaxLength="40" Unicode="true" FixedLength="false" />
+    <Property Type="Int64" Name="FKFacturaId" Nullable="false" />
+    <NavigationProperty Name="TblCompanias" Relationship="CivilFac.db3Model.FK_TblArticulosFac_2_0" FromRole="TblArticulosFac" ToRole="TblCompanias" />
+  </EntityType>
+  <EntityType Name="TblClientes">
+    <Key>
+      <PropertyRef Name="PkClienteId" />
+    </Key>
+    <Property Name="PkClienteId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKCompaniaId" Type="Int64" Nullable="false" />
+    <Property Name="RazonSocial" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Rfc" Type="String" Nullable="false" MaxLength="13" Unicode="true" FixedLength="false" />
+    <Property Name="TipoEmisor" Type="Int64" />
+    <Property Name="Calle" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="NoExterior" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="NoInterior" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Colonia" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Localidad" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Referencia" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Municipio" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Estado" Type="Int64" />
+    <NavigationProperty Name="TblCompanias" Relationship="CivilFac.db3Model.FK_TblClientes_0_0" FromRole="TblClientes" ToRole="TblCompanias" />
+  </EntityType>
+  <EntityType Name="TblCompanias">
+    <Key>
+      <PropertyRef Name="PkCompaniaId" />
+      <PropertyRef Name="PKCompaniaId" />
+    </Key>
+    <Property Name="PkCompaniaId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RazonSocial" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Rfc" Type="String" Nullable="false" MaxLength="13" Unicode="true" FixedLength="false" />
+    <Property Name="Calle" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="NoExterior" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="NoInterior" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Colonia" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Localidad" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Municipio" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="Estado" Type="Int64" />
+    <Property Name="CP" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Certificado" Type="String" MaxLength="3000" Unicode="true" FixedLength="false" />
+    <Property Name="NoCertificado" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="FechaInicial" Type="DateTime" />
+    <Property Name="FechaFinal" Type="DateTime" />
+    <Property Name="Logo" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Name="PasswordCertificado" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="Regimen" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="RegimenFiscal" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="RutaCertificado" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="ImagenRFC" Type="String" MaxLength="2147483647" Unicode="true" FixedLength="false" />
+    <Property Type="Int64" Name="PKCompaniaId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="TblArticulos" Relationship="CivilFac.db3Model.FK_TblArticulos_0_0" FromRole="TblCompanias" ToRole="TblArticulos" />
+    <NavigationProperty Name="TblArticulosFac" Relationship="CivilFac.db3Model.FK_TblArticulosFac_2_0" FromRole="TblCompanias" ToRole="TblArticulosFac" />
+    <NavigationProperty Name="TblClientes" Relationship="CivilFac.db3Model.FK_TblClientes_0_0" FromRole="TblCompanias" ToRole="TblClientes" />
+    <NavigationProperty Name="TblFactura" Relationship="CivilFac.db3Model.FK_TblFactura_5_0" FromRole="TblCompanias" ToRole="TblFactura" />
+    <NavigationProperty Name="TblImpuestosFac" Relationship="CivilFac.db3Model.FK_TblImpuestosFac_2_0" FromRole="TblCompanias" ToRole="TblImpuestosFac" />
+    <NavigationProperty Name="TblUsuarios" Relationship="CivilFac.db3Model.FK_TblUsuarios_0_0" FromRole="TblCompanias" ToRole="TblUsuarios" />
+  </EntityType>
+  <EntityType Name="TblEstados">
+    <Key>
+      <PropertyRef Name="PKestadoId" />
+    </Key>
+    <Property Name="PKestadoId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Estado" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TblFactura">
+    <Key>
+      <PropertyRef Name="PKFacturaId" />
+    </Key>
+    <Property Name="PKFacturaId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKCompaniaId" Type="Int64" Nullable="false" />
+    <Property Name="FKUsuarioId" Type="Int64" Nullable="false" />
+    <Property Name="FKClienteId" Type="Int64" Nullable="false" />
+    <Property Name="FKMetodoPagoId" Type="Int64" Nullable="false" />
+    <Property Name="FKFormaPagoId" Type="Int64" Nullable="false" />
+    <Property Name="Serie" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="Folio" Type="Decimal" Nullable="false" Precision="53" Scale="0" />
+    <Property Name="FechaCreacion" Type="DateTime" Nullable="false" />
+    <Property Name="HoraCreacion" Type="DateTime" Nullable="false" />
+    <Property Name="Estatus" Type="Int64" Nullable="false" />
+    <Property Name="Subtotal" Type="Double" Nullable="false" />
+    <Property Name="IVA" Type="Double" Nullable="false" />
+    <Property Name="Descuento" Type="Double" Nullable="false" />
+    <Property Name="MotivoDescuento" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Total" Type="Double" Nullable="false" />
+    <Property Name="CadenaOriginal" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="SelloDigital" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="CondicionesPago" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="CantidadConLetra" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+    <Property Name="TipoFactura" Type="Int64" Nullable="false" />
+    <Property Name="NoCertificado" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+    <Property Name="FechaEmision" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+    <Property Type="Int64" Name="FKMonedaId" Nullable="false" />
+    <Property Type="String" Name="Moneda" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="TipoCambio" Nullable="false" />
+    <NavigationProperty Name="TblCompanias" Relationship="CivilFac.db3Model.FK_TblFactura_5_0" FromRole="TblFactura" ToRole="TblCompanias" />
+  </EntityType>
+  <EntityType Name="TblFormadePago">
+    <Key>
+      <PropertyRef Name="PkFormaPagoId" />
+    </Key>
+    <Property Name="PkFormaPagoId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FormadePago" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TblImpuestos">
+    <Key>
+      <PropertyRef Name="PKImpuestoId" />
+    </Key>
+    <Property Name="PKImpuestoId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Impuesto" Type="String" Nullable="false" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="Tasa" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="TblImpuestosFac" Relationship="CivilFac.db3Model.FK_TblImpuestosFac_0_0" FromRole="TblImpuestos" ToRole="TblImpuestosFac" />
+  </EntityType>
+  <EntityType Name="TblImpuestosFac">
+    <Key>
+      <PropertyRef Name="PKImpuestosFac" />
+      <PropertyRef Name="FKFacturaId" />
+      <PropertyRef Name="PKImpuestosFacId" />
+    </Key>
+    <Property Name="PKImpuestosFac" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKFacturasId" Type="Int64" Nullable="false" />
+    <Property Name="FKCompaniaId" Type="Int64" Nullable="false" />
+    <Property Name="FKImpuestoId" Type="Int64" Nullable="false" />
+    <Property Name="DescripcionImpuesto" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="MontoImpuesto" Type="Double" Nullable="false" />
+    <Property Name="TasaImpuesto" Type="Double" />
+    <Property Name="Subtotal" Type="Double" Nullable="false" />
+    <Property Type="Int64" Name="FKFacturaId" Nullable="false" />
+    <Property Type="Int64" Name="PKImpuestosFacId" Nullable="false" />
+    <NavigationProperty Name="TblCompanias" Relationship="CivilFac.db3Model.FK_TblImpuestosFac_2_0" FromRole="TblImpuestosFac" ToRole="TblCompanias" />
+    <NavigationProperty Name="TblImpuestos" Relationship="CivilFac.db3Model.FK_TblImpuestosFac_0_0" FromRole="TblImpuestosFac" ToRole="TblImpuestos" />
+  </EntityType>
+  <EntityType Name="TblMetodoPago">
+    <Key>
+      <PropertyRef Name="PkMetodoPagoId" />
+    </Key>
+    <Property Name="PkMetodoPagoId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MetododePago" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TblUnidadesMedida">
+    <Key>
+      <PropertyRef Name="PKUnidadMedidaId" />
+    </Key>
+    <Property Name="PKUnidadMedidaId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UnidaddeMedida" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TblUsuarios">
+    <Key>
+      <PropertyRef Name="PKUsuarioId" />
+    </Key>
+    <Property Name="PKUsuarioId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FKCompaniaId" Type="Int64" Nullable="false" />
+    <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Apellidos" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Puesto" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Rol" Type="Int64" />
+    <Property Name="Password" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+    <Property Name="Bloqueado" Type="Int64" />
+    <NavigationProperty Name="TblCompanias" Relationship="CivilFac.db3Model.FK_TblUsuarios_0_0" FromRole="TblUsuarios" ToRole="TblCompanias" />
+  </EntityType>
+  <Association Name="FK_TblArticulos_0_0">
+    <End Type="CivilFac.db3Model.TblCompanias" Role="TblCompanias" Multiplicity="1" />
+    <End Type="CivilFac.db3Model.TblArticulos" Role="TblArticulos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCompanias">
+        <PropertyRef Name="PKCompaniaId" />
+      </Principal>
+      <Dependent Role="TblArticulos">
+        <PropertyRef Name="FKCompaniaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblArticulosFac_2_0">
+    <End Type="CivilFac.db3Model.TblCompanias" Role="TblCompanias" Multiplicity="1" />
+    <End Type="CivilFac.db3Model.TblArticulosFac" Role="TblArticulosFac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCompanias">
+        <PropertyRef Name="PKCompaniaId" />
+      </Principal>
+      <Dependent Role="TblArticulosFac">
+        <PropertyRef Name="FKCompaniaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblClientes_0_0">
+    <End Type="CivilFac.db3Model.TblCompanias" Role="TblCompanias" Multiplicity="1" />
+    <End Type="CivilFac.db3Model.TblClientes" Role="TblClientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCompanias">
+        <PropertyRef Name="PKCompaniaId" />
+      </Principal>
+      <Dependent Role="TblClientes">
+        <PropertyRef Name="FKCompaniaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblFactura_5_0">
+    <End Type="CivilFac.db3Model.TblCompanias" Role="TblCompanias" Multiplicity="1" />
+    <End Type="CivilFac.db3Model.TblFactura" Role="TblFactura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCompanias">
+        <PropertyRef Name="PKCompaniaId" />
+      </Principal>
+      <Dependent Role="TblFactura">
+        <PropertyRef Name="FKCompaniaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblImpuestosFac_2_0">
+    <End Type="CivilFac.db3Model.TblCompanias" Role="TblCompanias" Multiplicity="1" />
+    <End Type="CivilFac.db3Model.TblImpuestosFac" Role="TblImpuestosFac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCompanias">
+        <PropertyRef Name="PKCompaniaId" />
+      </Principal>
+      <Dependent Role="TblImpuestosFac">
+        <PropertyRef Name="FKCompaniaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblUsuarios_0_0">
+    <End Type="CivilFac.db3Model.TblCompanias" Role="TblCompanias" Multiplicity="1" />
+    <End Type="CivilFac.db3Model.TblUsuarios" Role="TblUsuarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblCompanias">
+        <PropertyRef Name="PKCompaniaId" />
+      </Principal>
+      <Dependent Role="TblUsuarios">
+        <PropertyRef Name="FKCompaniaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblImpuestosFac_0_0">
+    <End Type="CivilFac.db3Model.TblImpuestos" Role="TblImpuestos" Multiplicity="1" />
+    <End Type="CivilFac.db3Model.TblImpuestosFac" Role="TblImpuestosFac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblImpuestos">
+        <PropertyRef Name="PKImpuestoId" />
+      </Principal>
+      <Dependent Role="TblImpuestosFac">
+        <PropertyRef Name="FKImpuestoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

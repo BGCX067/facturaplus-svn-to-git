@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="External.master.cs" Inherits="Facturador.External" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+     <meta name="keywords" content="factura electronica, facturacion electronica, CFD, PACFD, factura electronica, facturacion electronica, PAC, CFDI, facturacion electronica, facturacion electronica en mexico" />
+    <meta name="description" content="Sistema de Facturacion Electronica GRATIS, factura electronica CFDI y timbrado, fácil, rapido y seguro. Empiece a facturar en 5 minutos." />
+    <title>Facturacion Electronica | FacturaPlus.com.mx</title>
+
+    <link href="Styles/core.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <div id="wrapper">
+        <div id="sitename" class="clear">
+            <!-- YOUR SITE NAME -->
+            <img src="img/FacturaPlus.com.mx.png" />
+        </div>
+        <div id="navbar">
+            <div class="clear">
+                <!-- PAGE NAVIGATION -->
+                <div class="sf-menu">
+                <a href="#">Inicio</a> 
+                <a href="#">Planes</span></a> 
+                <a href="blog.html">Tutoriales</a>
+                <a href="#">Clientes</a> 
+                <a href="#">Desarrollo</a> 
+                <a href="#">Soporte</a> 
+                <a href="#">Contacto</a>
+                </div>
+            </div>
+        </div>
+        <div id="header" class="clear">
+            <div class="header-text">
+                <h2>
+                    <strong>FacturaPlus</strong> La Mejor opción Para Emitir facturas electrónicas.
+                </h2>
+                <p>
+                    Por disposición Oficial Tiene hasta el 31 de Diciembre para empezar a emitir facturas
+                    eléctronicas.</p>
+            </div>
+            <div class="header-images">
+                <asp:ContentPlaceHolder ID="RegistroContent" runat="server" />
+            </div>
+        </div>
+        <div class="header-bottom">
+        </div>
+        <div id="body-wrapper">
+            <!-- BREADCRUMB NAVIGATION -->
+            <div class="bcnav">
+                <div class="bcnav-left">
+                    <div class="bcnav-right clear">
+                        <h3>
+                           <asp:ContentPlaceHolder ID="MainTitle" runat="server" />
+                        </h3>
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="body" class="clear">
+                <div class="clear">
+                    <div class="inner_copy">
+                    </div>
+                    <div class="column column-650 column-left">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                        
+                    </div>
+                    <div id="sidebar" class="column column-240 column-right">
+                        <ul>
+                            <li>
+                                <h4>
+                                    Enlances</h4>
+                                <ul>
+                                    <li><a href="#" title="spyka Webmaster resources">spyka webmaster</a></li>
+                                    <li><a href="#" title="free web templates">Free web templates</a></li>
+                                    <li><a href="#" title="webmaster forums">Webmaster forums</a></li>
+                                    <li><a href="#" title="mybb themes">MyBB themes</a></li>
+                                    <li><a href="#" title="free phpbb3 themes">phpBB3 styles</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>
+                                    Planes</h4>
+                                <ul>
+                                    <li><a href="#">Pequeño Negocio y P</a></li>
+                                    <li><a href="#">Mediano</a></li>
+                                    <li><a href="#">Suspendisse consequat magna at.</a></li>
+                                    <li><a href="#">Etiam eget diam id ligula rhoncus.</a></li>
+                                    <li><a href="#">Revendedores</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4>
+                                    Sponsors</h4>
+                                <ul>
+                                    <li><a href="#" title="premium templates"><strong>ThemeForest</strong></a> - premium
+                                        HTML templates, WordPress themes and PHP scripts</li>
+                                    <li><a href="#" title="web hosting"><strong>Web hosting</strong></a> - 50 dollars off
+                                        when you use promocode <strong>awesome50</strong></li>
+                                    <li><a href="#" title="4templates"><strong>4templates</strong></a> - brilliant premium
+                                        templates</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end three column -->
+            </div>
+        </div>
+        <div id="footer">
+            <div class="fleft">
+                <p>
+                    Copyright FacturaPlus.com.mx.
+                </p>
+            </div>
+            <div class="fright">
+                <p>
+                    Cerrada Tanzanita #350 Mza. 41 Lote 4 SM. 254 Fraccionamiento la Joya. C.P:77500
+                    Cancun Quintana Roo.
+                </p>
+            </div>
+            <div class="fclear">
+            </div>
+          
+        </div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,4 @@
+﻿CREATE TABLE [TblEstados] (
+[PkestadoId] INTEGER  PRIMARY KEY IDENTITY NOT NULL,
+[Estado] VARCHAR(30)  NOT NULL
+);

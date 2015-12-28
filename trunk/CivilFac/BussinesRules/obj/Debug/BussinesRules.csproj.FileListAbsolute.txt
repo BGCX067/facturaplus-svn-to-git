@@ -1,0 +1,5 @@
+C:\Repositorio\CivilFac\CivilFac\BussinesRules\bin\Debug\BussinesRules.dll
+C:\Repositorio\CivilFac\CivilFac\BussinesRules\bin\Debug\BussinesRules.pdb
+C:\Repositorio\CivilFac\CivilFac\BussinesRules\obj\Debug\ResolveAssemblyReference.cache
+C:\Repositorio\CivilFac\CivilFac\BussinesRules\obj\Debug\BussinesRules.dll
+C:\Repositorio\CivilFac\CivilFac\BussinesRules\obj\Debug\BussinesRules.pdb

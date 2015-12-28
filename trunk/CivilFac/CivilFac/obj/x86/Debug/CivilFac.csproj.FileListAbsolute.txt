@@ -1,0 +1,13 @@
+C:\Repositorio\CivilFac\CivilFac\CivilFac\bin\Debug\CivilFac.exe.config
+C:\Repositorio\CivilFac\CivilFac\CivilFac\bin\Debug\CivilFac.exe
+C:\Repositorio\CivilFac\CivilFac\CivilFac\bin\Debug\CivilFac.pdb
+C:\Repositorio\CivilFac\CivilFac\CivilFac\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Repositorio\CivilFac\CivilFac\CivilFac\obj\x86\Debug\CivilFac.Form1.resources
+C:\Repositorio\CivilFac\CivilFac\CivilFac\obj\x86\Debug\CivilFac.FrmImpuestos.resources
+C:\Repositorio\CivilFac\CivilFac\CivilFac\obj\x86\Debug\CivilFac.Properties.Resources.resources
+C:\Repositorio\CivilFac\CivilFac\CivilFac\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Repositorio\CivilFac\CivilFac\CivilFac\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Repositorio\CivilFac\CivilFac\CivilFac\obj\x86\Debug\CivilFac.exe
+C:\Repositorio\CivilFac\CivilFac\CivilFac\obj\x86\Debug\CivilFac.pdb
+C:\Repositorio\CivilFac\CivilFac\CivilFac\bin\Debug\DataLayer.dll
+C:\Repositorio\CivilFac\CivilFac\CivilFac\bin\Debug\DataLayer.pdb

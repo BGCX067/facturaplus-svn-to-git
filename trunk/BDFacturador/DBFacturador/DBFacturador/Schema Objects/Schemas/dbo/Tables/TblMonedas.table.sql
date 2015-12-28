@@ -1,0 +1,7 @@
+﻿CREATE TABLE [TblMonedas] (
+	[PkMonedaId] INTEGER  PRIMARY KEY IDENTITY NOT NULL,
+	[Moneda] VARCHAR(20)  NOT NULL,
+	[TipoCambio] DECIMAL(18,2) DEFAULT 1 NOT NULL,
+	[Prefijo] VARCHAR(3)  NULL,
+	[Simbolo] VARCHAR(3) DEFAULT '$' NULL
+);

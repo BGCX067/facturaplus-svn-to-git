@@ -1,0 +1,29 @@
+﻿
+
+.tablaRegistro {
+   
+    color: #FFFFFF;
+    border: none;
+    width: 350px;
+   
+}
+
+.tablaRegistro td {
+  height:auto;
+  padding:0;
+  
+}
+
+.tablaLogin {
+   
+
+    border: none;
+    width: 90%;
+   
+}
+
+.tablLogin td {
+  height:auto;
+  padding:0;
+  
+}

@@ -1,0 +1,8 @@
+C:\Repositorio\CivilFac\CivilFac\DataLayer\obj\Debug\ResolveAssemblyReference.cache
+C:\Repositorio\CivilFac\CivilFac\DataLayer\bin\Debug\DataLayer.dll.config
+C:\Repositorio\CivilFac\CivilFac\DataLayer\bin\Debug\DataLayer.dll
+C:\Repositorio\CivilFac\CivilFac\DataLayer\bin\Debug\DataLayer.pdb
+C:\Repositorio\CivilFac\CivilFac\DataLayer\obj\Debug\DataLayer.dll
+C:\Repositorio\CivilFac\CivilFac\DataLayer\obj\Debug\DataLayer.pdb
+C:\Repositorio\CivilFac\CivilFac\DataLayer\bin\Debug\SQLite.Designer.dll
+C:\Repositorio\CivilFac\CivilFac\DataLayer\bin\Debug\SQLite.Designer.pdb

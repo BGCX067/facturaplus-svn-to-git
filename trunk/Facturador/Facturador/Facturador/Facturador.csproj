@@ -1,0 +1,561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2F410AFD-E240-4552-A06B-E34A12ED33F0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Facturador</RootNamespace>
+    <AssemblyName>Facturador</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.60919\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.60919\lib\40\SanitizerProviders\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="JuiceUI">
+      <HintPath>..\packages\JuiceUI.1.1.1\lib\net40\JuiceUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="SanitizerProviders">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.60919\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Telerik.Web.UI, Version=2009.3.1208.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-bg_diagonals-small_25_c9c9c9_40x40.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-bg_flat_0_313f3c_40x100.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-bg_flat_0_4d4d4d_40x100.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-bg_flat_100_f1eeee_40x100.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-bg_highlight-soft_50_f7e17d_1x100.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-bg_highlight-soft_65_e9f245_1x100.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-bg_highlight-soft_75_59c9c0_1x100.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-bg_highlight-soft_75_d8ff94_1x100.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-bg_inset-soft_95_f46f5d_1x100.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-icons_16837f_256x240.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-icons_186764_256x240.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-icons_834916_256x240.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\images\ui-icons_9f1d1d_256x240.png" />
+    <Content Include="Content\themes\Fresh-Squeezed\jquery-ui-1.9.0.custom.css" />
+    <Content Include="Content\themes\Supercharged\images\ui-bg_flat_0_303030_40x100.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-bg_flat_100_383838_40x100.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-bg_flat_75_f2f2f2_40x100.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-bg_inset-hard_5_2b2b2b_1x100.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-bg_inset-soft_15_5e5e5e_1x100.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-bg_inset-soft_45_ffc905_1x100.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-bg_inset-soft_75_ffec52_1x100.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-bg_inset-soft_95_ff6124_1x100.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-icons_1c1c1c_256x240.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-icons_303030_256x240.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-icons_774322_256x240.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-icons_8a4e19_256x240.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-icons_ffbc0f_256x240.png" />
+    <Content Include="Content\themes\Supercharged\images\ui-icons_ffc905_256x240.png" />
+    <Content Include="Content\themes\Supercharged\jquery-ui-1.9.0.custom.css" />
+    <Content Include="DeskTop.aspx" />
+    <Content Include="FrmArticulos.aspx" />
+    <Content Include="FrmComprobante.aspx" />
+    <Content Include="FrmEmisores.aspx" />
+    <Content Include="FrmFormasdePago.aspx" />
+    <Content Include="FrmImpuestos.aspx" />
+    <Content Include="FrmMetodosdePago.aspx" />
+    <Content Include="FrmMonedas.aspx" />
+    <Content Include="FrmReceptores.aspx" />
+    <Content Include="FrmUnidadesdeMedida.aspx" />
+    <Content Include="FrmUsuarios.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="img\bodybg.png" />
+    <Content Include="img\button-bg.png" />
+    <Content Include="img\button-color-bg.png" />
+    <Content Include="img\clientsicon.png" />
+    <Content Include="img\configurationIcon.png" />
+    <Content Include="img\FacturaPlus.com.mx.png" />
+    <Content Include="img\footer-bg.png" />
+    <Content Include="img\header-bg.png" />
+    <Content Include="img\header-bottom.png" />
+    <Content Include="img\MonedaIcon.png" />
+    <Content Include="img\nav-bg.jpg" />
+    <Content Include="img\nav-bg.png" />
+    <Content Include="img\nav-left.png" />
+    <Content Include="img\nav-right.png" />
+    <Content Include="img\nav-selected-left.png" />
+    <Content Include="img\nav-selected-right.png" />
+    <Content Include="img\news-bg.png" />
+    <Content Include="img\productsicon.png" />
+    <Content Include="img\report_256.png" />
+    <Content Include="img\scaleicon.png" />
+    <Content Include="img\slide-1.jpg" />
+    <Content Include="img\SucursalesIcon.png" />
+    <Content Include="img\taxIcon.png" />
+    <Content Include="img\usersIcon.png" />
+    <Content Include="ListArticulos.aspx" />
+    <Content Include="ListComprobantes.aspx" />
+    <Content Include="ListEmisores.aspx" />
+    <Content Include="ListFormasdePago.aspx" />
+    <Content Include="ListImpuestos.aspx" />
+    <Content Include="ListMetodosdePago.aspx" />
+    <Content Include="ListMonedas.aspx" />
+    <Content Include="ListReceptores.aspx" />
+    <Content Include="ListSucursales.aspx" />
+    <Content Include="ListUnidadesdeMedida.aspx" />
+    <Content Include="ListUsuarios.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="menu_assets\images\overlay.png" />
+    <Content Include="menu_assets\styles.css" />
+    <Content Include="RecuperarPassword.aspx" />
+    <Content Include="Registro.aspx" />
+    <Content Include="Scripts\amplify-vsdoc.js" />
+    <Content Include="Scripts\amplify.js" />
+    <Content Include="Scripts\amplify.min.js" />
+    <Content Include="Scripts\GPL-LICENSE.txt" />
+    <Content Include="Scripts\jquery-1.8.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.9.0.js" />
+    <Content Include="Scripts\jquery-ui-1.9.0.min.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\json2.min.js" />
+    <Content Include="Scripts\juice.js" />
+    <Content Include="Scripts\juice.min.js" />
+    <Content Include="Scripts\MIT-LICENSE.txt" />
+    <Content Include="Scripts\README.txt" />
+    <Content Include="Scripts\ValidarFormularios.js" />
+    <Content Include="Styles\core.css" />
+    <Content Include="Styles\Main.css" />
+    <Content Include="Styles\Registro.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebServices\MyWebService.asmx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="clases\Employee.cs" />
+    <Compile Include="clases\menu.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeskTop.aspx.cs">
+      <DependentUpon>DeskTop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeskTop.aspx.designer.cs">
+      <DependentUpon>DeskTop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="External.Master.cs">
+      <DependentUpon>External.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="External.Master.designer.cs">
+      <DependentUpon>External.Master</DependentUpon>
+    </Compile>
+    <Compile Include="FrmArticulos.aspx.cs">
+      <DependentUpon>FrmArticulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmArticulos.aspx.designer.cs">
+      <DependentUpon>FrmArticulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmComprobante.aspx.cs">
+      <DependentUpon>FrmComprobante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmComprobante.aspx.designer.cs">
+      <DependentUpon>FrmComprobante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmisores.aspx.cs">
+      <DependentUpon>FrmEmisores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmEmisores.aspx.designer.cs">
+      <DependentUpon>FrmEmisores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFormasdePago.aspx.cs">
+      <DependentUpon>FrmFormasdePago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmFormasdePago.aspx.designer.cs">
+      <DependentUpon>FrmFormasdePago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImpuestos.aspx.cs">
+      <DependentUpon>FrmImpuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmImpuestos.aspx.designer.cs">
+      <DependentUpon>FrmImpuestos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMetodosdePago.aspx.cs">
+      <DependentUpon>FrmMetodosdePago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmMetodosdePago.aspx.designer.cs">
+      <DependentUpon>FrmMetodosdePago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMonedas.aspx.cs">
+      <DependentUpon>FrmMonedas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmMonedas.aspx.designer.cs">
+      <DependentUpon>FrmMonedas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReceptores.aspx.cs">
+      <DependentUpon>FrmReceptores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmReceptores.aspx.designer.cs">
+      <DependentUpon>FrmReceptores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUnidadesdeMedida.aspx.cs">
+      <DependentUpon>FrmUnidadesdeMedida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmUnidadesdeMedida.aspx.designer.cs">
+      <DependentUpon>FrmUnidadesdeMedida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios.aspx.cs">
+      <DependentUpon>FrmUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.aspx.designer.cs">
+      <DependentUpon>FrmUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListArticulos.aspx.cs">
+      <DependentUpon>ListArticulos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListArticulos.aspx.designer.cs">
+      <DependentUpon>ListArticulos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListComprobantes.aspx.cs">
+      <DependentUpon>ListComprobantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListComprobantes.aspx.designer.cs">
+      <DependentUpon>ListComprobantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListEmisores.aspx.cs">
+      <DependentUpon>ListEmisores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListEmisores.aspx.designer.cs">
+      <DependentUpon>ListEmisores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListFormasdePago.aspx.cs">
+      <DependentUpon>ListFormasdePago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListFormasdePago.aspx.designer.cs">
+      <DependentUpon>ListFormasdePago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListImpuestos.aspx.cs">
+      <DependentUpon>ListImpuestos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListImpuestos.aspx.designer.cs">
+      <DependentUpon>ListImpuestos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListMetodosdePago.aspx.cs">
+      <DependentUpon>ListMetodosdePago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListMetodosdePago.aspx.designer.cs">
+      <DependentUpon>ListMetodosdePago.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListMonedas.aspx.cs">
+      <DependentUpon>ListMonedas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListMonedas.aspx.designer.cs">
+      <DependentUpon>ListMonedas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListReceptores.aspx.cs">
+      <DependentUpon>ListReceptores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListReceptores.aspx.designer.cs">
+      <DependentUpon>ListReceptores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListSucursales.aspx.cs">
+      <DependentUpon>ListSucursales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListSucursales.aspx.designer.cs">
+      <DependentUpon>ListSucursales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListUnidadesdeMedida.aspx.cs">
+      <DependentUpon>ListUnidadesdeMedida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListUnidadesdeMedida.aspx.designer.cs">
+      <DependentUpon>ListUnidadesdeMedida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ListUsuarios.aspx.cs">
+      <DependentUpon>ListUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ListUsuarios.aspx.designer.cs">
+      <DependentUpon>ListUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecuperarPassword.aspx.cs">
+      <DependentUpon>RecuperarPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarPassword.aspx.designer.cs">
+      <DependentUpon>RecuperarPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebServices\MyWebService.asmx.cs">
+      <DependentUpon>MyWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Clientes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{30D75685-1C1F-4625-92A3-EB6B15E83BD2}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Factura.Core\Factura.Core.csproj">
+      <Project>{D97F1CAF-532A-47A5-B76E-1AED28C3420A}</Project>
+      <Name>Factura.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FacturaPlusTools\FacturaPlusTools.csproj">
+      <Project>{31FF6538-27E9-4913-BD43-0BFB29854FBE}</Project>
+      <Name>FacturaPlusTools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="External.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1632</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/Facturador</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

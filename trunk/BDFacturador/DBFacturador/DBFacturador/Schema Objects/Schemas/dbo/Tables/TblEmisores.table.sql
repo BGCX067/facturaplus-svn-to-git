@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[TblEmisores]
+(
+	[PKEmisorId] INTEGER  PRIMARY KEY IDENTITY NOT NULL,
+	[FkClienteId] Int  NOT NULL,
+	[RazonSocial] VARCHAR(200)  NOT NULL,
+	[Rfc] VARCHAR(13)  NOT NULL,
+	[Calle] VARCHAR(200)  NOT NULL,
+	[NoExterior] VARCHAR(10)  NULL,
+	[NoInterior] VARCHAR(10)  NULL,
+	[Colonia] VARCHAR(200)  NULL,
+	[Localidad] VARCHAR(200)  NULL,
+	[Municipio] VARCHAR(200)  NULL,
+	[Referencia] VARCHAR(200)  NULL,
+	[Estado] varchar(50)  NULL,
+	[CP] VARCHAR(10)  NULL,
+	[Certificado] text  NULL,
+	[NoCertificado] VARCHAR(100)  NULL,
+	[FechaCreacion] DATETIME  NULL,
+	[PasswordCertificado] VARCHAR(30)  NULL,
+	[ImagenRFC] IMAGE  NULL,
+	[NombreRFC] varchar(50)  NULL,
+	[ImagenLogo] IMAGE  NULL,
+	[NombreLogo] varchar(50)  NULL,
+	[Regimen] VARCHAR(50)  NULL,
+	[RegimenFiscal] VARCHAR(100)  NULL,
+	[RutaCertificado] VARCHAR(100)  NULL,
+	FOREIGN KEY (FkClienteId) REFERENCES TblClientes  (PKClienteId)
+);

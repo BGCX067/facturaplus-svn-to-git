@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CivilFacdb3ModelStoreContainer" CdmEntityContainer="CivilFac">
+    <EntitySetMapping Name="TblArticulos">
+      <EntityTypeMapping TypeName="CivilFac.db3Model.TblArticulos">
+        <MappingFragment StoreEntitySet="TblArticulos">
+          <ScalarProperty Name="PKArticuloid" ColumnName="PKArticuloid" />
+          <ScalarProperty Name="FKCompaniaId" ColumnName="FKCompaniaId" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ClaveInterna" ColumnName="ClaveInterna" />
+          <ScalarProperty Name="PrecioUnitario" ColumnName="PrecioUnitario" />
+          <ScalarProperty Name="ManejaIVA" ColumnName="ManejaIVA" />
+          <ScalarProperty Name="FKUnidaddeMedidaid" ColumnName="FKUnidaddeMedidaid" />
+          <ScalarProperty Name="FKFamiliaId" ColumnName="FKFamiliaId" />
+          <ScalarProperty Name="ActivoSN" ColumnName="ActivoSN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblArticulosFac">
+      <EntityTypeMapping TypeName="CivilFac.db3Model.TblArticulosFac">
+        <MappingFragment StoreEntitySet="TblArticulosFac">
+          <ScalarProperty Name="FKFacturaId" ColumnName="FKFacturaId" />
+          <ScalarProperty Name="PKArticulosFacId" ColumnName="PKArticulosFacId" />
+          <ScalarProperty Name="FKCompaniaId" ColumnName="FKCompaniaId" />
+          <ScalarProperty Name="FKArticuloId" ColumnName="FKArticuloId" />
+          <ScalarProperty Name="ArticuloDescripcion" ColumnName="ArticuloDescripcion" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="PrecioVenta" ColumnName="PrecioVenta" />
+          <ScalarProperty Name="UnidadMedida" ColumnName="UnidadMedida" />
+          <ScalarProperty Name="DescUnidadMedida" ColumnName="DescUnidadMedida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblClientes">
+      <EntityTypeMapping TypeName="CivilFac.db3Model.TblClientes">
+        <MappingFragment StoreEntitySet="TblClientes">
+          <ScalarProperty Name="PkClienteId" ColumnName="PkClienteId" />
+          <ScalarProperty Name="FKCompaniaId" ColumnName="FKCompaniaId" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+          <ScalarProperty Name="TipoEmisor" ColumnName="TipoEmisor" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="NoExterior" ColumnName="NoExterior" />
+          <ScalarProperty Name="NoInterior" ColumnName="NoInterior" />
+          <ScalarProperty Name="Colonia" ColumnName="Colonia" />
+          <ScalarProperty Name="Localidad" ColumnName="Localidad" />
+          <ScalarProperty Name="Referencia" ColumnName="Referencia" />
+          <ScalarProperty Name="Municipio" ColumnName="Municipio" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblCompanias">
+      <EntityTypeMapping TypeName="CivilFac.db3Model.TblCompanias">
+        <MappingFragment StoreEntitySet="TblCompanias">
+          <ScalarProperty Name="PKCompaniaId" ColumnName="PKCompaniaId" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="Rfc" ColumnName="Rfc" />
+          <ScalarProperty Name="Calle" ColumnName="Calle" />
+          <ScalarProperty Name="NoExterior" ColumnName="NoExterior" />
+          <ScalarProperty Name="NoInterior" ColumnName="NoInterior" />
+          <ScalarProperty Name="Colonia" ColumnName="Colonia" />
+          <ScalarProperty Name="Localidad" ColumnName="Localidad" />
+          <ScalarProperty Name="Municipio" ColumnName="Municipio" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="CP" ColumnName="CP" />
+          <ScalarProperty Name="Certificado" ColumnName="Certificado" />
+          <ScalarProperty Name="NoCertificado" ColumnName="NoCertificado" />
+          <ScalarProperty Name="FechaInicial" ColumnName="FechaInicial" />
+          <ScalarProperty Name="FechaFinal" ColumnName="FechaFinal" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="PasswordCertificado" ColumnName="PasswordCertificado" />
+          <ScalarProperty Name="Regimen" ColumnName="Regimen" />
+          <ScalarProperty Name="RegimenFiscal" ColumnName="RegimenFiscal" />
+          <ScalarProperty Name="RutaCertificado" ColumnName="RutaCertificado" />
+          <ScalarProperty Name="ImagenRFC" ColumnName="ImagenRFC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblEstados">
+      <EntityTypeMapping TypeName="CivilFac.db3Model.TblEstados">
+        <MappingFragment StoreEntitySet="TblEstados">
+          <ScalarProperty Name="PKestadoId" ColumnName="PKestadoId" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblFactura">
+      <EntityTypeMapping TypeName="CivilFac.db3Model.TblFactura">
+        <MappingFragment StoreEntitySet="TblFactura">
+          <ScalarProperty Name="TipoCambio" ColumnName="TipoCambio" />
+          <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+          <ScalarProperty Name="FKMonedaId" ColumnName="FKMonedaId" />
+          <ScalarProperty Name="PKFacturaId" ColumnName="PKFacturaId" />
+          <ScalarProperty Name="FKCompaniaId" ColumnName="FKCompaniaId" />
+          <ScalarProperty Name="FKUsuarioId" ColumnName="FKUsuarioId" />
+          <ScalarProperty Name="FKClienteId" ColumnName="FKClienteId" />
+          <ScalarProperty Name="FKMetodoPagoId" ColumnName="FKMetodoPagoId" />
+          <ScalarProperty Name="FKFormaPagoId" ColumnName="FKFormaPagoId" />
+          <ScalarProperty Name="Serie" ColumnName="Serie" />
+          <ScalarProperty Name="Folio" ColumnName="Folio" />
+          <ScalarProperty Name="FechaCreacion" ColumnName="FechaCreacion" />
+          <ScalarProperty Name="HoraCreacion" ColumnName="HoraCreacion" />
+          <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="IVA" ColumnName="IVA" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="MotivoDescuento" ColumnName="MotivoDescuento" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="CadenaOriginal" ColumnName="CadenaOriginal" />
+          <ScalarProperty Name="SelloDigital" ColumnName="SelloDigital" />
+          <ScalarProperty Name="CondicionesPago" ColumnName="CondicionesPago" />
+          <ScalarProperty Name="CantidadConLetra" ColumnName="CantidadConLetra" />
+          <ScalarProperty Name="TipoFactura" ColumnName="TipoFactura" />
+          <ScalarProperty Name="NoCertificado" ColumnName="NoCertificado" />
+          <ScalarProperty Name="FechaEmision" ColumnName="FechaEmision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblFormadePago">
+      <EntityTypeMapping TypeName="CivilFac.db3Model.TblFormadePago">
+        <MappingFragment StoreEntitySet="TblFormadePago">
+          <ScalarProperty Name="PkFormaPagoId" ColumnName="PkFormaPagoId" />
+          <ScalarProperty Name="FormadePago" ColumnName="FormadePago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblImpuestos">
+      <EntityTypeMapping TypeName="CivilFac.db3Model.TblImpuestos">
+        <MappingFragment StoreEntitySet="TblImpuestos">
+          <ScalarProperty Name="PKImpuestoId" ColumnName="PKImpuestoId" />
+          <ScalarProperty Name="Impuesto" ColumnName="Impuesto" />
+          <ScalarProperty Name="Tasa" ColumnName="Tasa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblImpuestosFac">
+      <EntityTypeMapping TypeName="CivilFac.db3Model.TblImpuestosFac">
+        <MappingFragment StoreEntitySet="TblImpuestosFac">
+          <ScalarProperty Name="PKImpuestosFacId" ColumnName="PKImpuestosFacId" />
+          <ScalarProperty Name="FKFacturaId" ColumnName="FKFacturaId" />
+          <ScalarProperty Name="FKCompaniaId" ColumnName="FKCompaniaId" />
+          <ScalarProperty Name="FKImpuestoId" ColumnName="FKImpuestoId" />
+          <ScalarProperty Name="DescripcionImpuesto" ColumnName="DescripcionImpuesto" />
+          <ScalarProperty Name="MontoImpuesto" ColumnName="MontoImpuesto" />
+          <ScalarProperty Name="TasaImpuesto" ColumnName="TasaImpuesto" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblMetodoPago">
+      <EntityTypeMapping TypeName="CivilFac.db3Model.TblMetodoPago">
+        <MappingFragment StoreEntitySet="TblMetodoPago">
+          <ScalarProperty Name="PkMetodoPagoId" ColumnName="PkMetodoPagoId" />
+          <ScalarProperty Name="MetododePago" ColumnName="MetododePago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblUnidadesMedida">
+      <EntityTypeMapping TypeName="CivilFac.db3Model.TblUnidadesMedida">
+        <MappingFragment StoreEntitySet="TblUnidadesMedida">
+          <ScalarProperty Name="PKUnidadMedidaId" ColumnName="PKUnidadMedidaId" />
+          <ScalarProperty Name="UnidaddeMedida" ColumnName="UnidaddeMedida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblUsuarios">
+      <EntityTypeMapping TypeName="CivilFac.db3Model.TblUsuarios">
+        <MappingFragment StoreEntitySet="TblUsuarios">
+          <ScalarProperty Name="PKUsuarioId" ColumnName="PKUsuarioId" />
+          <ScalarProperty Name="FKCompaniaId" ColumnName="FKCompaniaId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+          <ScalarProperty Name="Puesto" ColumnName="Puesto" />
+          <ScalarProperty Name="Rol" ColumnName="Rol" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Bloqueado" ColumnName="Bloqueado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
